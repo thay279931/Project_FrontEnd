@@ -13,9 +13,8 @@ export const SearchValueProvider = ({ children }) => {
   const clearSearchState = () => {
     setFormData({});
     setIsChecked(false);
-    setSearchWaitTime('80')
+    setSearchWaitTime('80');
   };
-
 
   return (
     <shoppingContext.Provider

@@ -417,6 +417,7 @@ export default function ListTable() {
       // const arr = { ...response_favorite.data };
       const obj = {};
       response_favorite.data.forEach((el) => {
+        console.log('shop_sid' + el.shop_sid);
         obj[el.shop_sid] = true;
       });
       console.log(obj);
@@ -642,23 +643,23 @@ export default function ListTable() {
                 </div>
               </div>
             </div>
-            <div className='search_bar_button_group'>
-            <input
-              onClick={() => {
-                clearSearchState();
-              }}
-              type="button"
-              value="清空"
-              className="search_bar_clear"
-            />
-            <input
-              onClick={() => {
-                searchShop();
-              }}
-              type="submit"
-              value="開始搜尋"
-              className="search_bar_submit"
-            />
+            <div className="search_bar_button_group">
+              <input
+                onClick={() => {
+                  clearSearchState();
+                }}
+                type="button"
+                value="清空"
+                className="search_bar_clear"
+              />
+              <input
+                onClick={() => {
+                  searchShop();
+                }}
+                type="submit"
+                value="開始搜尋"
+                className="search_bar_submit"
+              />
             </div>
           </div>
         </form>
@@ -767,7 +768,7 @@ export default function ListTable() {
         {!toggle ? (
           <AiOutlineSearch className="search_mirror" />
         ) : (
-          <AiOutlineClose className="search_mirror_close"  />
+          <AiOutlineClose className="search_mirror_close" />
         )}
       </div>
     </>
